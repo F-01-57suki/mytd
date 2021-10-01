@@ -1,0 +1,420 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+全ページ共通
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/*-* 初期設定 *-*-*-*-*-*-*-*-*-*-*-*/
+html,body,header,nav,main,footer,div,section,p,span,ul,li,th,td,dl,dd,h1,h2,h3{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* IE対策 */
+main{
+  display: block;
+}
+
+/* 画像 */
+img{
+  border: 0;
+  vertical-align: top;
+}
+
+/* リストマーカー */
+ul,ol{
+  list-style: none;
+}
+
+/* HTML */
+html{
+  font-size: 62.5%;
+  font-family:"Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+  scroll-behavior:smooth;
+}
+
+/* テーブル */
+table{
+  border-collapse: collapse;
+}
+
+/* リンク */
+a{
+  color: rgb(0, 102, 204);
+  text-decoration: none;
+}
+
+a:hover{
+  color: rgb(204, 0, 102);
+}
+
+/* ボディ */
+body{
+  background-color: rgb(153, 204, 204);
+  color: rgb(51, 51, 51);
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+/*-* 中央揃え *-*-*-*-*-*-*-*-*-*-*-*/
+#wrapper{
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 80vw;
+  margin: auto;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+/*-* ボードカラー *-*-*-*-*-*-*-*-*-*-*-*/
+.bc_gray{
+  background-color:rgb(204, 204, 204);
+}
+.bc_red{
+  background-color:rgb(255, 102, 102);
+}
+.bc_blue{
+  background-color:rgb(102, 153, 255);
+}
+.bc_green{
+  background-color:rgb(102, 153, 102);
+}
+.bc_yellow{
+  background-color:rgb(255, 204, 102);
+}
+
+#bcs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bcs_gray,.bcs_red,.bcs_blue,.bcs_green,.bcs_yellow{
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+.bcs_gray{
+  color:rgb(204, 204, 204);
+}
+.bcs_red{
+  color:rgb(255, 102, 102);
+}
+.bcs_blue{
+  color:rgb(102, 153, 255);
+}
+.bcs_green{
+  color:rgb(102, 153, 102);
+}
+.bcs_yellow{
+  color:rgb(255, 204, 102);
+  margin-right: 0;
+}
+
+/*-* メイン *-*-*-*-*-*-*-*-*-*-*-*/
+main{
+  display: flex;
+  align-items:flex-start;
+}
+
+/*-* ナビ *-*-*-*-*-*-*-*-*-*-*-*/
+header{
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+}
+
+header>h1{
+  font-size: 3.0rem;
+  font-family: 'Fredoka One', cursive;
+  display:flex;
+  align-items: center;
+}
+
+.h1bulue{
+  color: rgb(0, 102, 204);
+
+}
+.h1red{
+  color: rgb(204, 0, 102);
+
+}
+.h1user{
+  font-size: 1.2rem;
+  font-family:"Hiragino Kaku Gothic ProN","ヒラギノ角ゴ proN W3","Yu Gothic","游ゴシック","YuGothic","游ゴシック体","Meiryo","メイリオ",sans-serif;
+}
+
+nav>ul{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+nav>ul>li{
+  font-size: 2.4rem;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color: rgb(51, 51, 51);
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+nav>ul>li>a{
+  color: rgb(255, 255, 255);
+}
+
+nav>ul>li>a:hover{
+  color: rgb(204, 0, 102);
+}
+
+/*-* ボード *-*-*-*-*-*-*-*-*-*-*-*/
+.board{
+  width: 25%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.board:nth-last-child(n+2){
+  margin-right: 20px;
+}
+
+.done{
+  background-color: rgb(153, 153, 153);
+}
+
+/*-* 中身 *-*-*-*-*-*-*-*-*-*-*-*/
+.b_title,.b_title>a{
+  display: flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between
+}
+
+.b_title>a>i{
+  line-height: 0;
+  font-size: 3.0rem;
+}
+.b_title>a{
+  color:rgb(51, 51, 51);
+}
+.b_title>a:hover{
+  color:rgb(102, 102, 102);
+}
+
+.b_label{
+  margin: 5px;
+  padding: 0 5px;
+  background-color: rgb(255, 204, 153);
+  border-radius: 20px;
+}
+
+.b_cont{
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.b_cont>p{
+  padding: 5px;
+}
+
+.b_cont:nth-child(n+2){
+  margin-top: 10px;
+}
+
+.b_c_menu{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.b_c_btn{
+  display: flex;
+  align-items:center;
+  padding: 5px 5px;
+  font-size: 1.6rem;
+}
+.b_c_btn .pd{
+  font-size: 2.0rem;
+  margin: 5px 5px 0 10px;
+}
+
+footer{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ログイン画面
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#login #wrapper,#error #wrapper{
+  width: 500px;
+  margin: 13% auto 0;
+}
+
+/*-* メイン *-*-*-*-*-*-*-*-*-*-*-*/
+#login main{
+  display: flex;
+  justify-content:space-evenly;
+  align-items:center;
+}
+
+#login main>h1{
+  font-size: 5.0rem;
+  font-family: 'Fredoka One', cursive;
+  display:flex;
+  align-items: center;
+}
+#login main>div>p,#login form>p:last-child{
+  margin-top: 10px;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+新規登録
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#signup>#wrapper,#user>#wrapper,#unsubscribe>#wrapper{
+  width: 500px;
+  margin: 8% auto 0;
+  padding: 40px 0 50px;
+}
+
+#signup main,#user main,#unsubscribe main,#create main{
+  display: block;
+}
+
+#signup h1,#user h1,#unsubscribe h1,#create h1{
+  font-size: 3.0rem;
+  font-family: 'Fredoka One', cursive;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup main>div,#user main>div,#unsubscribe main>div,#create main>div{
+  margin-top: 10px;
+  display:flex;
+  justify-content: center;
+}
+
+#signup main p,#signup table,#user main p,#user table,#unsubscribe main p,#unsubscribe table,#create main p,#create table,.su_fc{
+  margin-top: 20px;
+}
+
+#signup th,#user th{
+  width: 100px;
+  display: block;
+  text-align-last: justify;
+}
+
+#signup td{
+  width: 150px;
+}
+#user tr>td:nth-last-child(2){
+  width: 100px;
+}
+#user tr>td:last-child{
+  text-align: right;
+  width: 30px;
+}
+
+#unsubscribe th{
+  display: block;
+  text-align-last: justify;
+}
+
+.su_inpt{
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.su_pc{
+  text-align: center;
+}
+
+.su_fc{
+  display:flex;
+  justify-content:space-evenly;
+  align-items: center;
+  width: 250px;
+}
+.su_fc>input{
+  width: 25%;
+}
+
+.su_fr{
+  display:flex;
+  justify-content:right;
+  align-items: center;
+  width: 250px;
+}
+
+.caution{
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+  background-color: rgb(255, 255, 153);
+}
+
+span{
+  font-weight: bold;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+追加画面
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#create>#wrapper{
+  width: 500px;
+  margin: 3% auto 0;
+  padding: 40px 0 50px;
+}
+
+#create main #lin_swtch,#create main #bin_swtch{
+  text-align: right;
+  margin-top: 0;
+}
+
+#bin_swtch,#lin_swtch{
+  cursor: pointer;
+}
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+エラー画面
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+#error #wrapper{
+  text-align: center;
+  padding: 40px;
+}
+
+#error #wrapper>p:last-child{
+  padding-top: 20px;
+}
+
+
+/* ======================================
+  1025～px ＣＳＳ（パソコン）
+====================================== */
+@media screen and (min-width: 1025px) {
+}
+
+
+/* ======================================
+600～1024px ＣＳＳ（タブレット）
+====================================== */
+@media screen and (min-width: 617px) and (max-width: 1024px) {
+}
+
+
+/* ======================================
+0～616px ＣＳＳ（スマホ）※最小320×568考慮
+====================================== */
+@media screen and (min-width: 0px) and (max-width: 616px) {
+}
